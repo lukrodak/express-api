@@ -9,7 +9,7 @@ const DataSchema = new Schema({
         required: true,
         trim: true,
         maxlength: 10,
-        unique: true,
+        // unique: true,
         validate: {
             validator: (value) => {
                 return validator.isAlphanumeric(value);
@@ -29,15 +29,26 @@ const DataSchema = new Schema({
         trim: true,
         maxlength: 5
     },
+    fromThisOk: {
+        type: Number,
+        trim: true,
+        required: true
+    },
+
     nok: {
         type: Number,
         required: true,
         trim: true,
         maxlength: 5
     },
+    totalOk: {
+        type: Number,
+        required: true,
+        trim: true
+    },
     remarks: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         maxlength: 30,
         validate: {
