@@ -9,7 +9,6 @@ const DataSchema = new Schema({
         required: true,
         trim: true,
         maxlength: 10,
-        // unique: true,
         validate: {
             validator: (value) => {
                 return validator.isAlphanumeric(value);
@@ -48,7 +47,6 @@ const DataSchema = new Schema({
     },
     remarks: {
         type: String,
-        // required: true,
         trim: true,
         maxlength: 30,
         validate: {
